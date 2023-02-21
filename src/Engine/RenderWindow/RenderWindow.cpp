@@ -35,3 +35,46 @@ SDL_Texture* RenderWindow::loadTexture(const std::string& filepath) {
 
 	return t;
 }
+
+void RenderWindow::OnDraw(Drawable* obj) {
+#ifdef DEBUG
+	std::cout << "RenderWindow::OnDraw(Drawable* obj)" << std::endl;
+#endif // DEBUG
+
+	int e = SDL_RenderCopy(
+		_renderer,
+		obj->getTexture(),
+		obj->getSrc(),
+		obj->getDst()
+	);
+
+	if (e < 0) {
+		std::cout << " RenderWindow::render ERROR:\n" << SDL_GetError() << std::endl;
+	}
+}
+
+void RenderWindow::clear() {
+#ifdef DEBUG
+	std::cout << "RenderWindow::clear()" << std::endl;
+#endif // DEBUG
+
+	if (SDL_RenderClear(_renderer) < 0) {
+		std::cout << SDL_GetError() << std::endl;
+	}
+}
+
+void RenderWindow::display() {
+#ifdef DEBUG
+	std::cout << "RenderWindow::display()" << std::endl;
+#endif // DEBUG
+
+	SDL_RenderPresent(_renderer);
+}
+
+void RenderWindow::destroy() {
+#ifdef DEBUG
+	std::cout << "RenderWindow::destroy()" << std::endl;
+#endif // DEBUG
+
+	SDL_DestroyWindow(_window);
+}

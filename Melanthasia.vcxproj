@@ -131,14 +131,24 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\Engine\Drawable.cpp" />
     <ClCompile Include="src\Engine\Engine.cpp" />
+    <ClCompile Include="src\Engine\Event.cpp" />
+    <ClCompile Include="src\Engine\onCleanup.cpp" />
+    <ClCompile Include="src\Engine\onEvent.cpp" />
+    <ClCompile Include="src\Engine\onExecute.cpp" />
+    <ClCompile Include="src\Engine\onExit.cpp" />
     <ClCompile Include="src\Engine\onInit.cpp" />
+    <ClCompile Include="src\Engine\onLoop.cpp" />
+    <ClCompile Include="src\Engine\onRender.cpp" />
     <ClCompile Include="src\Engine\RenderWindow\RenderWindow.cpp" />
     <ClCompile Include="src\Game\Game.cpp" />
     <ClCompile Include="src\main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Engine\Drawable.h" />
     <ClInclude Include="src\Engine\Engine.h" />
+    <ClInclude Include="src\Engine\Event.h" />
     <ClInclude Include="src\Engine\RenderWindow\RenderWindow.h" />
     <ClInclude Include="src\Game\Game.h" />
   </ItemGroup>

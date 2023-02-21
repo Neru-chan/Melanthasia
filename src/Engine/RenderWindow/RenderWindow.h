@@ -1,9 +1,13 @@
+#pragma once
+
 #define DEBUG
 
 #include <iostream>
 
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>
+
+#include "Engine/Drawable.h"
 
 class RenderWindow {
 public:
@@ -12,7 +16,11 @@ public:
 
 	SDL_Texture* loadTexture(const std::string& filepath);
 
-	void render(SDL_Texture* texture);
+	void OnDraw(Drawable* obj);
+
+	void clear();
+	void display();
+	void destroy();
 
 private:
 	SDL_Window* _window;

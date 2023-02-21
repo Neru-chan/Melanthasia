@@ -1,3 +1,5 @@
+#pragma once
+
 #define DEBUG
 
 #include <iostream>
@@ -8,8 +10,5 @@ class Game : public Engine{
 public:
 	Game();
 
-	int onExecute();
-
 private:
-	bool running;
 };
