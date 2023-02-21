@@ -11,11 +11,12 @@
 
 class RenderWindow {
 public:
-	RenderWindow();
+	//RenderWindow();
 	RenderWindow(const std::string& title, const int& x, const int& y);
 
 	SDL_Texture* loadTexture(const std::string& filepath);
 
+	void onDraw();
 	void onDraw(Drawable* obj);
 
 	void clear();

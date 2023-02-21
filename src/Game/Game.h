@@ -17,16 +17,6 @@ public:
 	bool onInit();
 	void OnLoop();
 
-
 private:
-	class Resources {
-	public:
-		static bool load();
-
-		static SDL_Texture* loadTexture(const std::string& title);
-
-		static Tile getTile(const int& id);
-	private:
-		static std::vector<Tile> tiles;
-	};
+	std::vector<Tile> tiles;
 };

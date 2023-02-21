@@ -145,6 +145,11 @@
     <ClCompile Include="src\Engine\onInit.cpp" />
     <ClCompile Include="src\Engine\onLoop.cpp" />
     <ClCompile Include="src\Engine\onRender.cpp" />
+    <ClCompile Include="src\Engine\RenderWindow\clear.cpp" />
+    <ClCompile Include="src\Engine\RenderWindow\destroy.cpp" />
+    <ClCompile Include="src\Engine\RenderWindow\display.cpp" />
+    <ClCompile Include="src\Engine\RenderWindow\loadTexture.cpp" />
+    <ClCompile Include="src\Engine\RenderWindow\onDraw.cpp" />
     <ClCompile Include="src\Engine\RenderWindow\RenderWindow.cpp" />
     <ClCompile Include="src\Game\Game.cpp" />
     <ClCompile Include="src\Game\onInit.cpp" />

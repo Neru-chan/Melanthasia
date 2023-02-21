@@ -28,15 +28,15 @@
     <Filter Include="Header Files\Game">
       <UniqueIdentifier>{9156a786-f202-49a2-91e4-b04312261e3e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Engine\RenderWindow">
+      <UniqueIdentifier>{9d041b68-c00a-45e3-bfb7-6608dd911789}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\Engine\Engine.cpp">
-      <Filter>Source Files\Engine</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Engine\RenderWindow\RenderWindow.cpp">
       <Filter>Source Files\Engine</Filter>
     </ClCompile>
     <ClCompile Include="src\Game\Game.cpp">
@@ -83,6 +83,24 @@
     </ClCompile>
     <ClCompile Include="src\Game\Resources.cpp">
       <Filter>Source Files\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Engine\RenderWindow\RenderWindow.cpp">
+      <Filter>Source Files\Engine\RenderWindow</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Engine\RenderWindow\clear.cpp">
+      <Filter>Source Files\Engine\RenderWindow</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Engine\RenderWindow\display.cpp">
+      <Filter>Source Files\Engine\RenderWindow</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Engine\RenderWindow\loadTexture.cpp">
+      <Filter>Source Files\Engine\RenderWindow</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Engine\RenderWindow\onDraw.cpp">
+      <Filter>Source Files\Engine\RenderWindow</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Engine\RenderWindow\destroy.cpp">
+      <Filter>Source Files\Engine\RenderWindow</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
