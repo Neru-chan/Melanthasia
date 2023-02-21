@@ -22,20 +22,20 @@ RenderWindow::RenderWindow(const std::string& title, const int& x, const int& y)
 
 SDL_Texture* RenderWindow::loadTexture(const std::string& filepath) {
 #ifdef DEBUG
-	std::cout << "SDL_Texture* RenderWindow::loadTexture(const std::string& filepath)" << std::endl;
+	std::cout << "RenderWindow::loadTexture(const std::string& filepath)" << std::endl;
 #endif // DEBUG
 
 	SDL_Texture* t = nullptr;
 	t = IMG_LoadTexture(_renderer, filepath.c_str());
 
 	if (!t) {
-		std::cout << "RenderWindow::loadTexture ERROR:\n" << SDL_GetError() << std::endl;
+		std::cout << "RenderWindow::loadTexture ERROR: " << SDL_GetError() << std::endl;
 	}
 
 	return t;
 }
 
-void RenderWindow::OnDraw(Drawable* obj) {
+void RenderWindow::onDraw(Drawable* obj) {
 #ifdef DEBUG
 	std::cout << "RenderWindow::OnDraw(Drawable* obj)" << std::endl;
 #endif // DEBUG
@@ -48,7 +48,7 @@ void RenderWindow::OnDraw(Drawable* obj) {
 	);
 
 	if (e < 0) {
-		std::cout << " RenderWindow::render ERROR:\n" << SDL_GetError() << std::endl;
+		std::cout << "RenderWindow::OnDraw ERROR: " << SDL_GetError() << std::endl;
 	}
 }
 
@@ -58,7 +58,7 @@ void RenderWindow::clear() {
 #endif // DEBUG
 
 	if (SDL_RenderClear(_renderer) < 0) {
-		std::cout << SDL_GetError() << std::endl;
+		std::cout << "RenderWindow::clear ERROR: " << SDL_GetError() << std::endl;
 	}
 }
 

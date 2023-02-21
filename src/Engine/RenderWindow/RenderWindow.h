@@ -16,7 +16,7 @@ public:
 
 	SDL_Texture* loadTexture(const std::string& filepath);
 
-	void OnDraw(Drawable* obj);
+	void onDraw(Drawable* obj);
 
 	void clear();
 	void display();
