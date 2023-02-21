@@ -1,5 +1,8 @@
-#define DEBUG
+#define SDL_MAIN_HANDLED
+
+#include "Game/Game.h"
 
 int main() {
-	return 0;
+	Game game;
+	return game.onExecute();
 }
