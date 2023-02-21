@@ -8,7 +8,6 @@ RenderWindow::RenderWindow() {
 
 RenderWindow::RenderWindow(const std::string& title, const int& x, const int& y)
 	: _window(nullptr), _renderer(nullptr) {
-
 #ifdef DEBUG
 	std::cout << "RenderWindow::RenderWindow(const std::string& title, const int& x, const int& y)" << std::endl;
 #endif // DEBUG
