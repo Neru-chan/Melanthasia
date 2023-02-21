@@ -1,14 +1,11 @@
 #include "Drawable.h"
 
-Drawable::Drawable() {
-
-}
+Drawable::Drawable() {}
 
 void Drawable::setTexture(SDL_Texture* t) {
 	this->t = t;
 }
 void Drawable::setSrc(int x, int y, int w, int h) {
-
 	if (!src) {
 		src = new SDL_Rect;
 	}
@@ -19,7 +16,6 @@ void Drawable::setSrc(int x, int y, int w, int h) {
 	src->h = h;
 }
 void Drawable::setDst(int x, int y, int w, int h) {
-
 	if (!dst) {
 		dst = new SDL_Rect;
 	}

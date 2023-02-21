@@ -1,15 +1,11 @@
 #include "Event.h"
 
-Event::Event() {
-}
+Event::Event() {}
 
-Event::~Event() {
-
-}
+Event::~Event() {}
 
 void Event::OnEvent(SDL_Event* Event) {
     switch (Event->type) {
-
         /*case SDL_ACTIVEEVENT: {
             switch (Event->active.state) {
             case SDL_APPMOUSEFOCUS: {
