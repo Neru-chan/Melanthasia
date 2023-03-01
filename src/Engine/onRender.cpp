@@ -10,9 +10,13 @@ void Engine::OnRender() {
 	auto begin = std::chrono::high_resolution_clock::now();
 #endif // DEBUG
 
-	window->clear();
+	/*window->clear();
 	window->onDraw();
-	window->display();
+	window->display();*/
+
+	graphics.getRenderWindow()->Clear();
+	graphics.getRenderWindow()->Draw();
+	graphics.getRenderWindow()->Display();
 
 #ifdef DEBUG
 	auto end = std::chrono::high_resolution_clock::now();

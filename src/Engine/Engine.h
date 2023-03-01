@@ -1,6 +1,13 @@
 #pragma once
+
+#define DEBUG
+
+#ifdef DEBUG
+#include "iostream"
+#endif
+
 #include "Event.h"
-#include "RenderWindow/RenderWindow.h"
+#include "graphics/Graphics.h"
 
 class Engine : public Event {
 public:
@@ -18,6 +25,8 @@ public:
 
 	virtual void OnExit();
 
-	RenderWindow* window;
-	bool running;
+private:
+	Graphics graphics;
+	RenderWindow*	window;
+	bool			running;
 };

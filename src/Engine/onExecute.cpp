@@ -2,23 +2,20 @@
 
 int Engine::onExecute() {
 #ifdef DEBUG
-	std::cout << "Game::onExecute()" << std::endl;
+	std::cout << "Engine::onExecute()" << std::endl;
 #endif // DEBUG
 
 	if (onInit() == false) return -1;
 
 	SDL_Event e;
 
-	while (running) {
-		//Event
-		while (SDL_PollEvent(&e)) {
-			OnEvent(&e);
-		}
+	running = true;
 
-		//Loop
+	while (running) {
+		while (SDL_PollEvent(&e)) OnEvent(&e);
+
 		OnLoop();
 
-		//Render
 		OnRender();
 	}
 

@@ -1,16 +1,16 @@
 #include "Engine.h"
 
 bool Engine::onInit() {
-#ifdef DEBUG
+	#ifdef DEBUG
 	std::cout << "Engine::onInit()" << std::endl;
-#endif // DEBUG
+	#endif
 
 	if (SDL_Init(SDL_INIT_VIDEO) < 0) {
 		std::cout << SDL_GetError() << std::endl;
 		return false;
 	}
 
-	window = new RenderWindow("Engine", 640, 480);
+	graphics.onInit();
 
 	return true;
 }

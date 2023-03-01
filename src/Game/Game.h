@@ -18,5 +18,5 @@ public:
 	void OnLoop();
 
 private:
-	std::vector<Tile> tiles;
+	std::vector<Drawable> tiles;
 };

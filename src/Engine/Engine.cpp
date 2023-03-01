@@ -1,6 +1,3 @@
-#define DEBUG
-
-#include <iostream>
 #include "Engine.h"
 
 Engine::Engine() {

@@ -5,6 +5,6 @@ Game::Game() {
 	std::cout << "Game::Game()" << std::endl;
 #endif // DEBUG
 
-	window = nullptr;
+	//window = nullptr;
 	running = true;
 }

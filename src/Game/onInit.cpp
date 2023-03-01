@@ -10,10 +10,10 @@ bool Game::onInit() {
 		return false;
 	}
 
-	window = new RenderWindow("Melanthasia", 640, 480);
+	//window = new RenderWindow("Melanthasia", 640, 480);
 
-	Tile grass(0, 0, window->loadTexture("src/Assets/tile_0.png"));
-	tiles.push_back(grass);
+	//Tile grass(0, 0, window->loadTexture("src/Assets/tile_0.png"));
+	//tiles.push_back(grass);
 
 	return true;
 }

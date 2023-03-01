@@ -1,8 +1,12 @@
 #define SDL_MAIN_HANDLED
 
-#include "Game/Game.h"
+//#include "Game/Game.h"
+#include "Engine/Engine.h"
+
+
 
 int main() {
-	Game game;
-	return game.onExecute();
+	Engine engine;
+	
+	return engine.onExecute();
 }
