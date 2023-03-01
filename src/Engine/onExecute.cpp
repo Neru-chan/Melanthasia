@@ -1,11 +1,11 @@
 #include "Engine.h"
 
-int Engine::onExecute() {
+int Engine::OnExecute() {
 #ifdef DEBUG
 	std::cout << "Engine::onExecute()" << std::endl;
 #endif // DEBUG
 
-	if (onInit() == false) return -1;
+	if (OnInit() == false) return -1;
 
 	SDL_Event e;
 

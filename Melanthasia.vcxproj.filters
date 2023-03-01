@@ -31,6 +31,18 @@
     <Filter Include="Source Files\Engine\graphics">
       <UniqueIdentifier>{6ad0b8a6-17c1-47ab-bd45-168609b3eb28}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Game">
+      <UniqueIdentifier>{fb059c86-65a4-4751-bb11-91864a5f78f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Game">
+      <UniqueIdentifier>{6e8234f2-336f-4093-a752-c71699071284}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Game\World">
+      <UniqueIdentifier>{a7fb7919-4755-4cd1-9485-f1828d88ffd1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Game\World">
+      <UniqueIdentifier>{f53322e8-1800-41fb-b3cb-338cc60ed0c0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cpp">
@@ -39,41 +51,47 @@
     <ClCompile Include="src\Engine\Engine.cpp">
       <Filter>Source Files\Engine</Filter>
     </ClCompile>
-    <ClCompile Include="src\Engine\onInit.cpp">
+    <ClCompile Include="src\Engine\OnInit.cpp">
       <Filter>Source Files\Engine</Filter>
     </ClCompile>
     <ClCompile Include="src\Engine\Drawable.cpp">
       <Filter>Source Files\Engine</Filter>
     </ClCompile>
-    <ClCompile Include="src\Engine\onCleanup.cpp">
+    <ClCompile Include="src\Engine\OnCleanup.cpp">
       <Filter>Source Files\Engine</Filter>
     </ClCompile>
-    <ClCompile Include="src\Engine\onEvent.cpp">
+    <ClCompile Include="src\Engine\OnEvent.cpp">
       <Filter>Source Files\Engine</Filter>
     </ClCompile>
-    <ClCompile Include="src\Engine\onExit.cpp">
+    <ClCompile Include="src\Engine\OnExit.cpp">
       <Filter>Source Files\Engine</Filter>
     </ClCompile>
-    <ClCompile Include="src\Engine\onLoop.cpp">
+    <ClCompile Include="src\Engine\OnLoop.cpp">
       <Filter>Source Files\Engine</Filter>
     </ClCompile>
-    <ClCompile Include="src\Engine\onRender.cpp">
+    <ClCompile Include="src\Engine\OnRender.cpp">
       <Filter>Source Files\Engine</Filter>
     </ClCompile>
     <ClCompile Include="src\Engine\Event.cpp">
       <Filter>Source Files\Engine\Event</Filter>
     </ClCompile>
-    <ClCompile Include="src\Engine\onExecute.cpp">
+    <ClCompile Include="src\Engine\OnExecute.cpp">
       <Filter>Source Files\Engine</Filter>
     </ClCompile>
     <ClCompile Include="src\Engine\graphics\Graphics.cpp">
       <Filter>Source Files\Engine\graphics</Filter>
     </ClCompile>
-    <ClCompile Include="src\Engine\graphics\ResourceManager.cpp">
+    <ClCompile Include="src\Engine\graphics\AssetManager.cpp">
       <Filter>Source Files\Engine\graphics</Filter>
     </ClCompile>
     <ClCompile Include="src\Engine\graphics\RenderWindow.cpp">
       <Filter>Source Files\Engine\graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Game\Game.cpp">
+      <Filter>Source Files\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Game\World\Tile.cpp">
+      <Filter>Source Files\Game\World</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -89,11 +107,17 @@
     <ClInclude Include="src\Engine\graphics\Graphics.h">
       <Filter>Header Files\Engine\graphics</Filter>
     </ClInclude>
-    <ClInclude Include="src\Engine\graphics\ResourceManager.h">
+    <ClInclude Include="src\Engine\graphics\AssetManager.h">
       <Filter>Header Files\Engine\graphics</Filter>
     </ClInclude>
     <ClInclude Include="src\Engine\graphics\RenderWindow.h">
       <Filter>Header Files\Engine\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Game\Game.h">
+      <Filter>Header Files\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Game\World\Tile.h">
+      <Filter>Header Files\Game\World</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

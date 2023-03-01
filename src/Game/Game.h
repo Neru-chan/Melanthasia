@@ -1,22 +1,14 @@
 #pragma once
 
-#define DEBUG
-
-#include <iostream>
-#include <vector>
-
 #include "Engine/Engine.h"
 
-#include "Tile.h"
+#include "Game/World/Tile.h"
 
-class Game : public Engine{
+class Game : public Engine {
 public:
-	Game();
-
-
-	bool onInit();
-	void OnLoop();
+	bool OnInit();
+	void OnRender();
 
 private:
-	std::vector<Drawable> tiles;
+	Tile* tile;
 };

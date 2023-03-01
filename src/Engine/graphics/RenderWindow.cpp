@@ -2,11 +2,14 @@
 
 RenderWindow::RenderWindow(const std::string& title, const int& x, const int& y) {
 	#ifdef DEBUG
-	std::cout << "RenderWindow::RenderWindow" << std::endl;
+	std::cout << "RenderWindow::RenderWindow(const std::string& title, const int& x, const int& y)" << std::endl;
 	#endif
 
-	_window = SDL_CreateWindow(title.c_str(), SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, x, y, SDL_WINDOW_SHOWN);
-	_renderer = SDL_CreateRenderer(_window, -1, SDL_RENDERER_ACCELERATED);
+	this->_window = SDL_CreateWindow(title.c_str(), SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, x, y, SDL_WINDOW_SHOWN);
+	if (this->_window == NULL) std::cout << "SDL_CreateWindow ERROR: " << SDL_GetError() << std::endl;
+
+	this->_renderer = SDL_CreateRenderer(this->_window, -1, SDL_RENDERER_ACCELERATED);
+	if (this->_renderer == NULL) std::cout << "SDL_CreateRenderer ERROR: " << SDL_GetError() << std::endl;
 }
 
 RenderWindow::~RenderWindow() {
@@ -17,8 +20,8 @@ RenderWindow::~RenderWindow() {
 	/*delete this->_renderer;
 	delete this->_window;*/
 
-	SDL_DestroyRenderer(_renderer);
-	SDL_DestroyWindow(_window);
+	SDL_DestroyRenderer(this->_renderer);
+	SDL_DestroyWindow(this->_window);
 }
 
 SDL_Window* RenderWindow::getWindow() {

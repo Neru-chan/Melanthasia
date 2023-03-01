@@ -11,19 +11,22 @@
 
 #include <SDL2/SDL_image.h>
 
-class ResourceManager {
+class AssetManager {
 public:
-	ResourceManager() {
-
-	}
-
-	ResourceManager(SDL_Renderer* renderer) {
+	AssetManager(SDL_Renderer* renderer) {
 		this->_renderer = renderer;
 	}
 
-	~ResourceManager();
+	~AssetManager();
 
+	/**
+	Loads SDL_Texture* into a map
+	*/
 	void			LoadTexture(const std::string& name, const std::string& path);
+
+	/**
+	* \returns SDL_Texture* from map
+	*/
 	SDL_Texture*	GetTexture (const std::string& name);
 
 private:

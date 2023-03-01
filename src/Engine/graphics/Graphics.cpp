@@ -14,21 +14,43 @@ RenderWindow* Graphics::getRenderWindow() {
 	return this->_win;
 }
 
-void Graphics::onInit() {
+bool Graphics::onInit() {
 #ifdef DEBUG
 	std::cout << "Graphics::onInit()" << std::endl;
 #endif
 
-	if (_win == nullptr) {
-		_win = new RenderWindow("Engine", 640, 480);
+	if (SDL_Init(SDL_INIT_VIDEO) < 0) {
+		std::cout << SDL_GetError() << std::endl;
+		return false;
 	}
+
+	if (_win != nullptr) {
+		return false;
+	}
+
+	if (_res != nullptr) {
+		return false;
+	}
+
+	_win = new RenderWindow("Engine", 640, 480);
+	_res = new AssetManager(this->getRenderWindow()->getRenderer());
+
+	return true;
 }
 
 void Graphics::LoadTexture(const std::string& name, const std::string& path) {
+	#ifdef DEBUG
+	std::cout << "Graphics::LoadTexture(const std::string& name, const std::string& path)" << std::endl;
+	#endif
+
 	_res->LoadTexture(name, path);
 }
 
 SDL_Texture* Graphics::GetTexture(const std::string& name) {
+	#ifdef DEBUG
+	std::cout << "Graphics::GetTexture(const std::string& name)" << std::endl;
+	#endif
+
 	return _res->GetTexture(name);
 }
 

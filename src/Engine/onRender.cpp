@@ -8,7 +8,7 @@ void Engine::OnRender() {
 #ifdef DEBUG
 	std::cout << "Engine::OnRender()" << std::endl;
 	auto begin = std::chrono::high_resolution_clock::now();
-#endif // DEBUG
+#endif
 
 	/*window->clear();
 	window->onDraw();
@@ -22,5 +22,5 @@ void Engine::OnRender() {
 	auto end = std::chrono::high_resolution_clock::now();
 	std::chrono::duration<float> duration = end - begin;
 	std::cout << "Engine::OnRender() FRAME TIME: " << duration.count() << "s. (fps: " << 1 / duration.count() << ")" << std::endl;
-#endif // DEBUG
+#endif
 }

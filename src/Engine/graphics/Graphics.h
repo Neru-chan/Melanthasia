@@ -7,7 +7,7 @@
 //#include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>
 
-#include "ResourceManager.h"
+#include "AssetManager.h"
 #include "RenderWindow.h"
 
 //#include "Engine/Drawable.h"
@@ -18,7 +18,10 @@ public:
 	Graphics();
 	virtual ~Graphics();
 
-	void onInit();
+	/**
+	* \returns true on success;
+	*/
+	bool onInit();
 
 	RenderWindow* getRenderWindow();
 
@@ -44,8 +47,8 @@ public:
 	//SDL_Renderer*	getRenderer();
 
 private:
-	RenderWindow*		_win;
-	ResourceManager*	_res;
+	RenderWindow*	_win;
+	AssetManager*	_res;
 
 	//SDL_Window*			_window;
 	//SDL_Renderer*		_renderer;

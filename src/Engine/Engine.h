@@ -13,9 +13,9 @@ class Engine : public Event {
 public:
 	Engine();
 
-	virtual int onExecute();
+	virtual int OnExecute();
 
-	virtual bool onInit();
+	virtual bool OnInit();
 
 	virtual void OnEvent(SDL_Event* Event);
 	virtual void OnLoop();
@@ -25,8 +25,9 @@ public:
 
 	virtual void OnExit();
 
-private:
 	Graphics graphics;
+
+private:
 	RenderWindow*	window;
 	bool			running;
 };
